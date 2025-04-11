@@ -24,10 +24,19 @@ p {
     color: #fa7272;
 }
 a {
-    color: #0066cc;
+    color: #00ff55;
     text-decoration: aquamarine;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+a:hover {
+    color: #31ac00;
+    text-decoration: underline;
 }
 section {
     background-color: blue;
     margin: 10px;
+}
+button:hover {
+    background-color: #00ff55;
+    color: #31ac00;
 }
