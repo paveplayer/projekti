@@ -1,16 +1,31 @@
 body {
-    background-color: #f0f0f0;
+    background-color: #a3ffc0;
     font-family: Arial, sans-serif;
 }
 h1 {
-    color: #333;
+    font-size: 60px;
+    background-color: aqua;
+}
+h2 {
+    font-size: 48px;
+    background-color: #ffcc00;
+}
+h3 {
+    font-size: 32px;
+    background-color: #ff6699;
+}
+h4 {
+    font-size: 18px;
+    background-color: #c195ff;
 }
 p {
-    color: #666;
-    line-height: 1.5;
-    margin: 20px;
+    color: #fa7272;
 }
 a {
     color: #0066cc;
     text-decoration: aquamarine;
+}
+section {
+    background-color: blue;
+    margin: 10px;
 }
