@@ -1,30 +1,39 @@
 body {
     background-color: #a3ffc0;
     font-family: Arial, sans-serif;
-    margin-right: 64px;
-    margin-left: 64px;
+    margin-right: 60px;
+    margin-left: 60px;
     display: grid;
     grid-template-areas: 
     "header header header header"
     "nav nav nav nav"
     "menu main main main"
     "footer footer footer footer";
-    grid-template-columns: 430px 30px 300px 140px;
-    
-}
-nav {grid-area: nav}
-.header {
-    grid-area: header;
-}
-.footer {
-    grid-area: footer;
-}
-.horizontal {
-    grid-area: main;
+    grid-template-columns: 200px 1fr 1fr 1fr;
+    max-width: 1000px;
+
 }
 
-main {
+header {
+    grid-area: header;
+    padding: 1em 3em;
+    margin: 1px;
+    background-color: #2eb6ff;
+    border: 1px solid black;
+    
+}
+.nav {grid-area: nav;
+  padding: 1em 3em;}
+.footer {
+    grid-area: footer;
+    
+}
+
+.main {
     grid-area: main;
+    padding: 2em 1em 1em;
+    display:grid;
+    right: 100em;
   }
 
 menu {
@@ -32,9 +41,9 @@ menu {
     font-size: 16px;
     background-color: aqua;
     border: 4px solid black;
-    height: 13cm;
-    width: 300px;
+    height: 29cm;
 }
+menu a{display: block;}
 h2 {
     font-size: 48px;
     background-color: #ffcc00;
@@ -70,6 +79,7 @@ button:hover {
 
 footer {
     display: flex;
+    grid-area: footer;
     justify-content: center;
     gap: 2em;
     border: 5px solid black;
@@ -79,8 +89,4 @@ footer {
     gap: 3em;
     padding: 1em 1em 3em;
     border: 5px solid black;
-  }
-  header {
-    padding: 3em 1em 1em;
-    background-color: #2eb6ff;
   }
