@@ -11,6 +11,7 @@ body {
     "footer footer footer footer";
     grid-template-columns: 200px 1fr 1fr 1fr;
     max-width: 1000px;
+    font-family: 'Orbitron', sans-serif;
 
 }
 
@@ -45,26 +46,23 @@ menu {
 }
 menu a{display: block;}
 
-h1 {
-    font-family: "Coral Pixels", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-h2 {
-    font-family: "Coral Pixels", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-h3 {
-    font-family: "Coral Pixels", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-h4 {
-    font-family: "Coral Pixels", serif;
-    font-weight: 400;
-    font-style: normal;
-}
+
+  @font-face {
+    font-family: 'Orbitron';
+    src: url('fonts/Orbitron-Rwegular.ttf') format('truetype');
+    font-weight: normal;
+  }
+  
+  @font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+  }
+  
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', sans-serif;
+  }
 p {
     color: #fa7272;
 }
