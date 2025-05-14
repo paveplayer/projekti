@@ -112,12 +112,11 @@ footer {
 
   @media screen and (max-width: 639px) {
     body {
-      margin-right: 64px;
-      margin-left: 64px;
+      margin-right: 16px;
+      margin-left: 16px;
     }
-    h1 {font-size: 60px;}
-    h2 {font-size: 48px;}
-    h3 {font-size: 38px;}
+    h1 {font-size: 32px;}
+    h2 {font-size: 26px;}
+    h3 {font-size: 22px;}
     h4 {font-size: 18px;}
-  
   }
