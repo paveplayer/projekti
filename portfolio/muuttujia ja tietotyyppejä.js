@@ -1,20 +1,26 @@
 console.log("muuttujia ja tietotyyppejä avattu");
-let a = 3;
-let b = 5;
-let c = 7;
-let d = 15;
-function summa() {
+let a = parseFloat(document.getElementById("1").value) || 0;
+let b = parseFloat(document.getElementById("2").value) || 0;
+function laskin_summa() {
+    let a = parseFloat(document.getElementById("1").value) || 0;
+let b = parseFloat(document.getElementById("2").value) || 0;
     alert(a + b);
 }
 
-function vähennys() {
-    alert(b - c);
+function laskin_vähennys() {
+    let a = parseFloat(document.getElementById("1").value) || 0;
+let b = parseFloat(document.getElementById("2").value) || 0;
+    alert(a - b);
 }
 
-function kerto() {
-    alert(c * d);
+function laskin_kerto() {
+    let a = parseFloat(document.getElementById("1").value) || 0;
+let b = parseFloat(document.getElementById("2").value) || 0;
+    alert(a * b);
 }
 
-function jako() {
-    alert(d / a);
+function laskin_jako() {
+    let a = parseFloat(document.getElementById("1").value) || 0;
+let b = parseFloat(document.getElementById("2").value) || 0;
+    alert(a / b);
 }

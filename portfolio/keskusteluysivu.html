@@ -11,7 +11,7 @@
     
 </head>
 <body>
-    <script src="keskusteluysivu.js"></script>
+    <script src="keskustelusivu.js" defer></script>
     <header style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; text-align: center; background-color: blueviolet;">
         <h1>keskustelu sivu</h1>
         <div class="header">
@@ -21,14 +21,14 @@
     
 <menu>
 <div class="menu">
-   <a href="portfolio/index.html">index</a>
-   <a href="portfolio/flex.html">portofolio</a>
-   <a href="portfolio/keskusteluysivu.html">keskustelusivu</a>
+    <a href="./keskusteluysivu.html">keskustelu</a>
+    <a href="./index.html">index</a>
+    <a href="./flex.html">flex</a>
 </div>
 </menu>
     <div class="nav">
         <a href="../cv_juttu.html">kotisivu</a>
-        <a href="../tyÃ¶kokemukseni.html">tyÃ¶kokemukseni</a>
+        <a href="../työkokemukseni.html">tyÃ¶kokemukseni</a>
         <a href="../index.html">portfolio</a>
     </div>
 
@@ -42,24 +42,24 @@
 <dialog open>
 <section>
 syntymÃ¤pÃ¤ivÃ¤:
-<input type="date"></input>
+<input type="date" id="birthdayField"></input>
 </section>
 <section>
 Email:
-<input type="email"></input>
+<input type="email" id="emailField"></input>
 </section>
 <section>
 viestin tyyppi:
-<select name="tyyppi" id="tyyppi">
+<select name="tyyppi" id="typeField">
     <option value="kysymys">kysymys</option>
     <option value="kommentti">kommentti</option>
 </select>
 </section>
 <section>
-<textarea name="" id="">kirjoita tÃ¤hÃ¤n</textarea>
+<textarea name="kommentoi" id="commentField">kirjoita tÃ¤hÃ¤n</textarea>
 </section>
 <section>
-    <button style="background-color: blueviolet; color: white; font-size: 20px;">lÃ¤hetÃ¤</button> 
+    <button onclick="send()" style="background-color: blueviolet; color: white; font-size: 20px;">lÃ¤hetÃ¤</button> 
     <div>hyvÃ¤ksy, ettÃ¤ kÃ¤yttÃ¤mme tietojasi kaupallisesti.</div>
 </section>
 </dialog>
