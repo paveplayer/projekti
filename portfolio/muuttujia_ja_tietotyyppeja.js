@@ -7,7 +7,7 @@ let b = parseFloat(document.getElementById("2").value) || 0;
     alert(a + b);
 }
 
-function laskin_vähennys() {
+function laskin_vahennys() {
     let a = parseFloat(document.getElementById("1").value) || 0;
 let b = parseFloat(document.getElementById("2").value) || 0;
     alert(a - b);
