@@ -1,0 +1,64 @@
+body {
+    background-color: aquamarine;
+    grid-template-areas: 
+    "logo header header header"
+    "banner banner banner banner"
+    "nav nav nav nav"
+    "menu main main main"
+    "footer footer footer footer";
+    grid-template-columns: 200px 1fr 1fr 1fr;
+    max-width: 1000px;
+
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    padding: 1em 3em;
+    margin: 1px;
+    background-color: #00507b;
+    border: 1px solid black;
+    
+}
+p {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300px;
+  font-style: normal;
+}
+menu a{display: block;}
+  h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+main {
+    grid-area: main;
+    padding: 2em 1em 1em;
+    display:grid;
+    right: 100em;
+  }
+.logo{
+    grid-area: logo;
+    background-color: #2eb6ff;
+    border: 1px solid black;
+    width: 60px;
+    height: 60px;
+}
+.header {
+  grid-area: header;
+  display: flex;
+  border: solid 10px black;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+kuvat {
+  outline: auto;
+  outline-color: #2eb6ff;
+  outline-width: 5px;
+}
