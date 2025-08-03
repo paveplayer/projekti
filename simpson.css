@@ -58,6 +58,7 @@ img {
     height: auto;
 }
 kuvat {
+  display: flex;
   outline: auto;
   outline-color: #2eb6ff;
   outline-width: 5px;
