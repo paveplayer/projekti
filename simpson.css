@@ -57,9 +57,11 @@ img {
     width: 100%;
     height: auto;
 }
-kuvat {
+.kuvat {
   display: flex;
-  outline: auto;
-  outline-color: #2eb6ff;
-  outline-width: 5px;
+  img {
+    width: 4cm;
+    height: 3cm;
+    object-fit: cover;
+  }
 }
