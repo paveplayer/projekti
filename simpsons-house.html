@@ -18,28 +18,39 @@
     <h1>Simpsons-sivusto</h1>
 </div>
 <a href="./springfield-sivu.html">springfield</a>
-<a href="">characters</a>
-<a href="">forum</a>
+<a href="./simpsons-hahmosivu.html">characters</a>
+<a href="./simpsons forum.html">forum</a>
 <hr style="width: 17cm; background-color: black; height: 2px;">
 <h2>simpsons house</h2>
 <div class="main" style="display: flex">
- <div class="kuvat" onclick=zoomIn()>
-    <a href="https" target="_blank">
-        <img src="simpson alakerta.webp" alt="talo">
+<div class="kuvat">
+    <a href="simpson alakerta.webp" target="_blank">
+        <img src="simpson alakerta.webp" alt="talo" onclick="openFullscreen(this)">
     </a>
-    <a href="" target="_blank">
-        <img src="simpson talo ulkoot.webp" alt="moes">
+    <a href="simpson talo ulkoot.webp" target="_blank">
+        <img src="simpson talo ulkoot.webp" alt="moes" onclick="openFullscreen(this)">
     </a>
-    <a href="" target="_blank">
-        <img src="simpson talo yöl.jpg" alt="kwik-e-mart">
+    <a href="simpson talo yöl.jpg" target="_blank">
+        <img src="simpson talo yöl.jpg" alt="kwik-e-mart" onclick="openFullscreen(this)">
     </a>
-    <a href="" target="_blank">
-        <img style="width: 100px;" src="ylä ja ala.webp" alt="simpsons keittiö">
+    <a href="ylä ja ala.webp" target="_blank">
+        <img style="width: 100px;" src="ylä ja ala.webp" alt="simpsons keittiö" onclick="openFullscreen(this)">
     </a>
-    <a href="" target="_blank">
-        <img src="simpsons keittiä.jpg" alt="">
+    <a href="simpsons keittiä.jpg" target="_blank">
+        <img src="simpsons keittiä.jpg" alt="" onclick="openFullscreen(this)">
     </a>
- </div>
+</div>
+<script>
+function openFullscreen(img) {
+    if (img.requestFullscreen) {
+        img.requestFullscreen();
+    } else if (img.webkitRequestFullscreen) { /* Safari */
+        img.webkitRequestFullscreen();
+    } else if (img.msRequestFullscreen) { /* IE11 */
+        img.msRequestFullscreen();
+    }
+}
+</script>
 </div>
 <script src="simpsons.js"></script>
 </body>

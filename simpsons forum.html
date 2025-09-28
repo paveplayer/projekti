@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simpsons-sivusto</title>
+    <link rel="stylesheet" type="text/css" href="simpson.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="header">
+    <div class="logo">
+        <img src="logo.png" alt="Simpsons Logo">
+    </div>
+    <h3>Simpsons-sivusto</h3>
+</div>
+<a href="./springfield-sivu.html">springfield</a>
+<a href="./simpsons-hahmosivu.html">characters</a>
+<a href="./simpsons forum.html">forum</a>
+<button onclick="openCommentWindow()" style="padding-top: 10px;">new message</button>
+
+<div class="main">
+    <div id="commentsSection">
+        <h4>john smith - 1.9.2001</h4>
+        <p>fantastic show!</p>
+        <hr style="width: 17cm; background-color: black; height: 2px;">
+        <h4>seppo taalasmaa - 5.5.2010</h4>
+        <p>I love this show!</p>
+    </div>
+</div>
+
+<script>
+function openCommentWindow() {
+  const newWindow = window.open("", "commentWindow", "width=400,height=300");
+
+  newWindow.document.write(`
+    <!doctype html>
+    <html>
+      <head>
+        <meta charset="utf-8">
+        <title>Add Comment</title>
+        <style>
+          body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+          }
+          label { display:block; margin-top:10px; }
+          input, textarea {
+            width: 100%;
+            padding: 5px;
+            margin-top:5px;
+          }
+          button {
+            margin-top: 15px;
+            padding: 8px 12px;
+          }
+        </style>
+      </head>
+      <body>
+        <h2>Leave a Comment</h2>
+        <label>Name:</label>
+        <input type="text" id="name">
+
+        <label>Title/Date:</label>
+        <input type="text" id="title">
+
+        <label>Comment:</label>
+        <textarea id="comment" rows="4"></textarea>
+
+        <button id="submitBtn">Submit</button>
+
+        <script>
+          document.getElementById('submitBtn').addEventListener('click', () => {
+            const name = document.getElementById('name').value.trim();
+            const title = document.getElementById('title').value.trim();
+            const comment = document.getElementById('comment').value.trim();
+
+            if (window.opener && name && title && comment) {
+              window.opener.addCommentToPage(name, title, comment);
+              window.close();
+            } else {
+              alert('Please fill all fields.');
+            }
+          });
+        <\/script>
+      </body>
+    </html>
+  `);
+
+  newWindow.document.close();
+}
+
+function addCommentToPage(name, title, comment) {
+  const section = document.getElementById('commentsSection');
+  section.innerHTML += `
+    <hr style="width: 17cm; background-color: black; height: 2px;">
+    <h4>${name} - ${title}</h4>
+    <p>${comment}</p>`;
+}
+</script>
+</body>
+</html>

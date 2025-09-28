@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simpsons-sivusto</title>
+    <link rel="stylesheet" type="text/css" href="simpson.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="simpsons.js"></script>
+</head>
+<body>
+<div class="header">
+    <div class = "logo">
+    <img src="logo.png" alt="Simpsons Logo">
+</div>
+    <h1>Simpsons-sivusto</h1>
+</div>
+<a href="./springfield-sivu.html">springfield</a>
+<a href="./simpsons-hahmosivu.html">characters</a>
+<a href="./simpsons forum.html">forum</a>
+<hr style="width: 17cm; background-color: black; height: 2px;">
+<div class="main">
+ <div class="kuvat" id="characters">
+    <a href="character-info.html?name=homer" target="_blank" onclick="openNewWindow1()">
+    <img src="homer.webp" alt="Homer">
+</a>
+<a href="character-info.html?name=marge" target="_blank" onclick="openNewWindow2()">
+    <img src="marge.jpg" alt="Marge">
+</a>
+<a href="character-info.html?name=bart" target="_blank" onclick="openNewWindow3()">
+    <img src="bart.webp" alt="Bart">
+</a>
+<a href="character-info.html?name=lisa" target="_blank" onclick="openNewWindow4()">
+    <img src="Lisa_Simpson.png" alt="Lisa">
+</a>
+<a href="character-info.html?name=maggie" target="_blank" onclick="openNewWindow5()">
+    <img src="Maggie_Simpson.png" alt="Maggie">
+</a>
+</div>
+  <div class="kuvat">
+    <a href="https" target="_blank" onclick="openNewWindow6()">
+        <img src="moe.png" alt="talo">
+    </a>
+    <a href="" target="_blank" onclick="openNewWindow7()">
+        <img src="mr burns.png" alt="moes">
+    </a>
+    <a href="" target="_blank" onclick="openNewWindow8()">
+        <img src="apu.webp" alt="kwik-e-mart">
+    </a>
+ </div>
+</div>
+<script>
+
+function openNewWindow1() {
+  const newWindow = window.open("", "newWindow", "width=400,height=300");
+
+  newWindow.document.write(`
+    <!doctype html>
+    <html>
+      <head>
+        <meta charset="utf-8">
+        <title>Homer</title>
+        <style>
+          body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: #0000000;
+          }
+          .info, .memes { display: none; }
+          .active { display: block; }
+        </style>
+      </head>
+      <body>
+        <img src="homer.webp" alt="Homer" style="width:150px;height:auto;">
+        <br>
+        <button id="infoBtn">Info</button>
+        <button id="memesBtn">Memes</button>
+        <h2>Homer Jay Simpson</h2>
+
+        <div class="info active">
+          <p>Homer Jay Simpson is a fictional character and the main protagonist of the American animated sitcom The Simpsons. He is voiced by Dan Castellaneta and first appeared on television in The Tracey Ullman Show short "Good Night" on April 19, 1987. Homer is the husband of Marge Simpson and father to Bart, Lisa, and Maggie. He works as a safety inspector at the Springfield Nuclear Power Plant, despite his laziness and incompetence.</p>
+          <audio controls><source src="äänet/homer-doh-101soundboards.mp3" type="audio/mpeg"></audio>
+          <audio controls><source src="äänet/good-boy-101soundboards.mp3" type="audio/mpeg"></audio>
+          <audio controls><source src="äänet/sandwich-101soundboards.mp3" type="audio/mpeg"></audio>
+        </div>
+
+        <div class="memes">
+          <img src="portfolio/himoläski homer.jpg" alt="Homer Meme 1" style="width:200px;height:auto;"  onclick="openFullscreen(this)">
+          <img src="portfolio/homeme.png" alt="Homer Meme 2" style="width:200px;height:auto;" onclick="openFullscreen(this)">
+          <img src="portfolio/OIP (1).webp" alt="Homer Meme 3" style="width:200px;height:auto;" onclick="openFullscreen(this)">
+          <img src="portfolio/OIP.webp" alt="Homer Meme 4" style="width:200px;height:auto;" onclick="openFullscreen(this)">
+          <img src="portfolio/OIP2.webp" alt="Homer Meme 6" style="width:200px;height:auto;"  onclick="openFullscreen(this)">
+          <img src="portfolio/R.jpg" alt="Homer Meme 5" style="width:200px;height:auto;"  onclick="openFullscreen(this)">
+        </div>
+
+        <button onclick="window.close()">Close</button>
+
+        <script>
+          const infoDiv = document.querySelector('.info');
+          const memesDiv = document.querySelector('.memes');
+          const infoBtn = document.getElementById('infoBtn');
+          const memesBtn = document.getElementById('memesBtn');
+
+          infoBtn.addEventListener('click', () => {
+            infoDiv.classList.add('active');
+            memesDiv.classList.remove('active');
+          });
+
+          memesBtn.addEventListener('click', () => {
+            memesDiv.classList.add('active');
+            infoDiv.classList.remove('active');
+          });
+          function openFullscreen(img) {
+    if (img.requestFullscreen) {
+        img.requestFullscreen();
+    } else if (img.webkitRequestFullscreen) { /* Safari */
+        img.webkitRequestFullscreen();
+    } else if (img.msRequestFullscreen) { /* IE11 */
+        img.msRequestFullscreen();
+    }
+}
+        <\/script>
+      </body>
+    </html>
+  `);
+
+  newWindow.document.close();
+}
+
+
+function openNewWindow2() {
+  const newWindow = window.open("", "newWindow", "width=400,height=300");
+
+  newWindow.document.write(`
+    <!doctype html>
+    <html>
+      <head>
+        <meta charset="utf-8">
+        <title>Marge</title>
+        <style>
+          body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: #0000000;
+          }
+          .info, .memes { display: none; }
+          .active { display: block; }
+        </style>
+      </head>
+      <body>
+        <img src="marge.jpg" alt="Marge" style="width:150px;height:auto;">
+        <br>
+        <button id="infoBtn">Info</button>
+        <button id="memesBtn">Memes</button>
+        <h2>Marge Simpson</h2>
+
+        <div class="info active">
+          <p>Marge Simpson is one of the main characters in the American animated sitcom The Simpsons and part of the eponymous family.</p>
+          <audio controls><source src="äänet/Voicy_ I finally said it.mp3" type="audio/mpeg"></audio>
+          <audio controls><source src="äänet/Voicy_That's pretty bad.mp3" type="audio/mpeg"></audio>
+          <audio controls><source src="äänet/Voicy_Hmm...mp3" type="audio/mpeg"></audio>
+        </div>
+
+        <div class="memes">
+          <img src="memet paitsi homer/marge mem1.png" alt="Marge Meme 1" style="width:200px;height:auto;"  onclick="openFullscreen(this)">
+          <img src="memet paitsi homer/marge mem2.jpg" alt="Marge Meme 2" style="width:200px;height:auto;"  onclick="openFullscreen(this)">
+          <img src="memet paitsi homer/marge mem 3.jpg" alt="Marge Meme 3" style="width:200px;height:auto;" onclick="openFullscreen(this)">
+          <img src="memet paitsi homer/marge mem 4.jpeg" alt="Marge Meme 4" style="width:200px;height:auto;" onclick="openFullscreen(this)">
+          <img src="memet paitsi homer/marge mem 5.jpg" alt="Marge Meme 5" style="width:200px;height:auto;"   onclick="openFullscreen(this)">
+          <img src="memet paitsi homer/marge mem 6.jpg" alt="Marge Meme 6" style="width:200px;height:auto;"  onclick="openFullscreen(this)">
+        </div>
+
+        <button onclick="window.close()">Close</button>
+
+        <script>
+          const infoDiv = document.querySelector('.info');
+          const memesDiv = document.querySelector('.memes');
+          const infoBtn = document.getElementById('infoBtn');
+          const memesBtn = document.getElementById('memesBtn');
+
+          infoBtn.addEventListener('click', () => {
+            infoDiv.classList.add('active');
+            memesDiv.classList.remove('active');
+          });
+
+          memesBtn.addEventListener('click', () => {
+            memesDiv.classList.add('active');
+            infoDiv.classList.remove('active');
+          });
+          function openFullscreen(img) {
+    if (img.requestFullscreen) {
+        img.requestFullscreen();
+    } else if (img.webkitRequestFullscreen) { /* Safari */
+        img.webkitRequestFullscreen();
+    } else if (img.msRequestFullscreen) { /* IE11 */
+        img.msRequestFullscreen();
+    }
+}
+        <\/script>
+      </body>
+    </html>
+  `);
+
+  newWindow.document.close();
+}
+function openNewWindow3() {
+  const newWindow = window.open("", "newWindow", "width=400,height=300");
+  newWindow.document.write(`
+    <!doctype html>
+    <html>
+      <head>
+        <meta charset="utf-8">
+        <title>Bart</title>
+        <style>
+          body {font-family: Arial, sans-serif; text-align: center; margin-top: 50px; #0000000;}
+          .info, .memes {display:none;} .active {display:block;}
+        </style>
+      </head>
+      <body>
+        <img src="bart.webp" alt="Bart Simpson" style="width:150px;height:auto;">
+        <br>
+        <button id="infoBtn">Info</button>
+        <button id="memesBtn">Memes</button>
+        <h2>Bart Simpson</h2>
+
+        <div class="info active">
+          <p>Bart Simpson is the mischievous, rebellious, and often misunderstood eldest child of the Simpson family in The Simpsons.</p>
+          <audio controls><source src="äänet/Voicy_Aye Crumba.mp3" type="audio/mpeg"></audio>
+          <audio controls><source src="äänet/Voicy_Big Fat Mental Patient.mp3" type="audio/mpeg"></audio>
+          <audio controls><source src="äänet/Voicy_Moron.mp3" type="audio/mpeg"></audio>
+        </div>
+
+        <div class="memes">
+          <img src="memet paitsi homer/bart mem1.jpg" style="width:200px;height:auto;" onclick="openFullscreen(this)">
+          <img src="memet paitsi homer/bart mem2.jpg" style="width:200px;height:auto;" onclick="openFullscreen(this)">
+          <img src="memet paitsi homer/bart mem3.jpg" style="width:200px;height:auto;" onclick="openFullscreen(this)">
+          <img src="memet paitsi homer/bart mem4.jpg" style="width:200px;height:auto;" onclick="openFullscreen(this)">
+          <img src="memet paitsi homer/bart mem5.webp" style="width:200px;height:auto;" onclick="openFullscreen(this)">
+          <img src="memet paitsi homer/bart mem6.jpeg" style="width:200px;height:auto;" onclick="openFullscreen(this)">
+        </div>
+
+        <button onclick="window.close()">Close</button>
+
+        <script>
+          const infoDiv=document.querySelector('.info'); const memesDiv=document.querySelector('.memes');
+          const infoBtn=document.getElementById('infoBtn'); const memesBtn=document.getElementById('memesBtn');
+          infoBtn.addEventListener('click',()=>{infoDiv.classList.add('active');memesDiv.classList.remove('active');});
+          memesBtn.addEventListener('click',()=>{memesDiv.classList.add('active');infoDiv.classList.remove('active');});
+          function openFullscreen(img) {
+    if (img.requestFullscreen) {
+        img.requestFullscreen();
+    } else if (img.webkitRequestFullscreen) { /* Safari */
+        img.webkitRequestFullscreen();
+    } else if (img.msRequestFullscreen) { /* IE11 */
+        img.msRequestFullscreen();
+    }
+}
+        <\/script>
+      </body>
+    </html>
+  `);
+  newWindow.document.close();
+}
+
+function openNewWindow4() {
+  const newWindow = window.open("", "newWindow", "width=400,height=300");
+  newWindow.document.write(`
+    <!doctype html>
+    <html>
+      <head>
+        <meta charset="utf-8">
+        <title>Lisa</title>
+        <style>
+          body {font-family: Arial,sans-serif;text-align:center;margin-top:50px;background-color:#0000000;}
+          .info,.memes{display:none;} .active{display:block;}
+        </style>
+      </head>
+      <body>
+        <img src="Lisa_Simpson.png" alt="Lisa Simpson" style="width:150px;height:auto;"><br>
+        <button id="infoBtn">Info</button><button id="memesBtn">Memes</button>
+        <h2>Lisa Simpson</h2>
+
+        <div class="info active">
+          <p>Lisa Simpson is the intelligent and passionate middle child of the Simpson family, known for her saxophone playing and activism.</p>
+          <audio controls><source src="äänet/Voicy_The city of Washington.mp3" type="audio/mpeg"></audio>
+          <audio controls><source src="äänet/Voicy_ Happy Valentines.mp3" type="audio/mpeg"></audio>
+          <audio controls><source src="äänet/Voicy_Much better.mp3" type="audio/mpeg"></audio>
+        </div>
+
+        <div class="memes">
+          <img src="memet paitsi homer/lisa mem1.jpg" style="width:200px;height:auto;" onclick="openFullscreen(this)">
+          <img src="memet paitsi homer/lisa mem2.avif" style="width:200px;height:auto;" onclick="openFullscreen(this)">
+          <img src="memet paitsi homer/lisa mem3.png" style="width:200px;height:auto;"  onclick="openFullscreen(this)">
+          <img src="memet paitsi homer/lisa mem4.jpg" style="width:200px;height:auto;"  onclick="openFullscreen(this)">
+          <img src="memet paitsi homer/lisa mem5.png" style="width:200px;height:auto;"  onclick="openFullscreen(this)">
+          <img src="memet paitsi homer/lisa mem6.jpg" style="width:200px;height:auto;"  onclick="openFullscreen(this)">
+        </div>
+
+        <button onclick="window.close()">Close</button>
+
+        <script>
+          const infoDiv=document.querySelector('.info'),memesDiv=document.querySelector('.memes');
+          const infoBtn=document.getElementById('infoBtn'),memesBtn=document.getElementById('memesBtn');
+          infoBtn.addEventListener('click',()=>{infoDiv.classList.add('active');memesDiv.classList.remove('active');});
+          memesBtn.addEventListener('click',()=>{memesDiv.classList.add('active');infoDiv.classList.remove('active');});
+          function openFullscreen(img) {
+    if (img.requestFullscreen) {
+        img.requestFullscreen();
+    } else if (img.webkitRequestFullscreen) { /* Safari */
+        img.webkitRequestFullscreen();
+    } else if (img.msRequestFullscreen) { /* IE11 */
+        img.msRequestFullscreen();
+    }
+}
+        <\/script>
+      </body>
+    </html>
+  `);
+  newWindow.document.close();
+}
+
+function openNewWindow5() {
+  const newWindow = window.open("", "newWindow", "width=400,height=300");
+  newWindow.document.write(`
+    <!doctype html>
+    <html>
+      <head><meta charset="utf-8"><title>Maggie</title>
+        <style>body{font-family:Arial,sans-serif;text-align:center;margin-top:50px;background-color:#0000000;}
+        .info,.memes{display:none;}.active{display:block;}</style>
+      </head>
+      <body>
+        <img src="Maggie_Simpson.png" alt="Maggie Simpson" style="width:150px;height:auto;"><br>
+        <button id="infoBtn">Info</button><button id="memesBtn">Memes</button>
+        <h2>Maggie Simpson</h2>
+
+        <div class="info active">
+          <p>Maggie Simpson is the baby of the Simpson family, known for her pacifier and silent but memorable presence in The Simpsons.</p>
+          <audio controls><source src="äänet/maggie-simpson-noise.mp3" type="audio/mpeg"></audio>
+          <audio controls><source src="äänet/Maggie-giggles.mp3" type="audio/mpeg"></audio>
+          <audio controls><source src="äänet/maggie-simpson.mp3" type="audio/mpeg"></audio>
+        </div>
+
+        <div class="memes">
+          <img src="memet paitsi homer/maggie mem1.jpg" style="width:200px;height:auto;"  onclick="openFullscreen(this)">
+          <img src="memet paitsi homer/maggie mem2.jpg" style="width:200px;height:auto;"  onclick="openFullscreen(this)">
+          <img src="memet paitsi homer/maggie mem3.avif" style="width:200px;height:auto;"   onclick="openFullscreen(this)">
+          <img src="memet paitsi homer/maggie mem4.jpg" style="width:200px;height:auto;"  onclick="openFullscreen(this)">
+          <img src="memet paitsi homer/maggie mem5.jpg" style="width:200px;height:auto;"  onclick="openFullscreen(this)">
+          <img src="memet paitsi homer/maggie mem6.jpg" style="width:200px;height:auto;"  onclick="openFullscreen(this)">
+        </div>
+
+        <button onclick="window.close()">Close</button>
+
+        <script>
+          const infoDiv=document.querySelector('.info'),memesDiv=document.querySelector('.memes');
+          const infoBtn=document.getElementById('infoBtn'),memesBtn=document.getElementById('memesBtn');
+          infoBtn.addEventListener('click',()=>{infoDiv.classList.add('active');memesDiv.classList.remove('active');});
+          memesBtn.addEventListener('click',()=>{memesDiv.classList.add('active');infoDiv.classList.remove('active');});
+          function openFullscreen(img) {
+    if (img.requestFullscreen) {
+        img.requestFullscreen();
+    } else if (img.webkitRequestFullscreen) { /* Safari */
+        img.webkitRequestFullscreen();
+    } else if (img.msRequestFullscreen) { /* IE11 */
+        img.msRequestFullscreen();
+    }
+}
+        <\/script>
+      </body>
+    </html>
+  `);
+  newWindow.document.close();
+}
+
+function openNewWindow6() {
+  const newWindow = window.open("", "newWindow", "width=400,height=300");
+  newWindow.document.write(`
+    <!doctype html><html><head><meta charset="utf-8"><title>Moe</title>
+    <style>body{font-family:Arial,sans-serif;text-align:center;margin-top:50px;background-color:aquamarine;}
+    .info,.memes{display:none;}.active{display:block;}</style></head>
+    <body>
+      <img src="moe.png" alt="Moe Szyslak" style="width:150px;height:auto;"><br>
+      <button id="infoBtn">Info</button><button id="memesBtn">Memes</button>
+      <h2>Moe Szyslak</h2>
+
+      <div class="info active">
+        <p>Moe Szyslak is the gruff but often lonely bartender of Moe's Tavern in The Simpsons.</p>
+        <audio controls><source src="äänet/Voicy_ We called that the Stinga.mp3" type="audio/mpeg"></audio>
+        <audio controls><source src="äänet/Voicy_Get out of here..mp3" type="audio/mpeg"></audio>
+        <audio controls><source src="äänet/Voicy_I don't look like that!.mp3" type="audio/mpeg"></audio>
+      </div>
+
+      <div class="memes">
+        <img src="memet paitsi homer/moe mem1.jpg" style="width:200px;height:auto;" onclick="openFullscreen(this)">
+        <img src="memet paitsi homer/moe mem2.jpg" style="width:200px;height:auto;" onclick="openFullscreen(this)">
+        <img src="memet paitsi homer/moe mem3.avif" style="width:200px;height:auto;"  onclick="openFullscreen(this)">
+        <img src="memet paitsi homer/moe mem4.webp" style="width:200px;height:auto;"  onclick="openFullscreen(this)">
+        <img src="memet paitsi homer/moe mem5.webp" style="width:200px;height:auto;"  onclick="openFullscreen(this)">
+        <img src="memet paitsi homer/moe mem6.webp" style="width:200px;height:auto;"  onclick="openFullscreen(this)">
+      </div>
+
+      <button onclick="window.close()">Close</button>
+
+      <script>
+        const infoDiv=document.querySelector('.info'),memesDiv=document.querySelector('.memes');
+        const infoBtn=document.getElementById('infoBtn'),memesBtn=document.getElementById('memesBtn');
+        infoBtn.addEventListener('click',()=>{infoDiv.classList.add('active');memesDiv.classList.remove('active');});
+        memesBtn.addEventListener('click',()=>{memesDiv.classList.add('active');infoDiv.classList.remove('active');});
+        function openFullscreen(img) {
+    if (img.requestFullscreen) {
+        img.requestFullscreen();
+    } else if (img.webkitRequestFullscreen) { /* Safari */
+        img.webkitRequestFullscreen();
+    } else if (img.msRequestFullscreen) { /* IE11 */
+        img.msRequestFullscreen();
+    }
+}
+      <\/script>
+    </body>
+    </html>
+  `);
+  newWindow.document.close();
+}
+
+function openNewWindow7() {
+  const newWindow = window.open("", "newWindow", "width=400,height=300");
+  newWindow.document.write(`
+    <!doctype html><html><head><meta charset="utf-8"><title>Mr. Burns</title>
+    <style>body{font-family:Arial,sans-serif;text-align:center;margin-top:50px;background-color:#0000000;}
+    .info,.memes{display:none;}.active{display:block;}</style></head>
+    <body>
+      <img src="mr burns.png" alt="Mr. Burns" style="width:150px;height:auto;"><br>
+      <button id="infoBtn">Info</button><button id="memesBtn">Memes</button>
+      <h2>Mr. Burns</h2>
+
+      <div class="info active">
+        <p>Charles Montgomery Burns is the wealthy, tyrannical owner of the Springfield Nuclear Power Plant in The Simpsons.</p>
+        <audio controls><source src="äänet/Voicy_Mr. Burns Laughing.mp3" type="audio/mpeg"></audio>
+        <audio controls><source src="äänet/Voicy_I Am A Big Boy.mp3" type="audio/mpeg"></audio>
+        <audio controls><source src="äänet/Voicy_Exactly.mp3" type="audio/mpeg"></audio>
+      </div>
+
+      <div class="memes">
+        <img src="memet paitsi homer/mr burns mem1.webp" style="width:200px;height:auto;" onclick="openFullscreen(this)">
+        <img src="memet paitsi homer/mr burns mem2.jpg" style="width:200px;height:auto;"  onclick="openFullscreen(this)">
+        <img src="memet paitsi homer/mr burns mem3.jpg" style="width:200px;height:auto;"  onclick="openFullscreen(this)">
+        <img src="memet paitsi homer/mr burns mem4.jpeg" style="width:200px;height:auto;"   onclick="openFullscreen(this)">
+        <img src="memet paitsi homer/mr burns mem5.jpg" style="width:200px;height:auto;"  onclick="openFullscreen(this)">
+        <img src="memet paitsi homer/mr burns mem6.jpg" style="width:200px;height:auto;"  onclick="openFullscreen(this)">
+      </div>
+
+      <button onclick="window.close()">Close</button>
+
+      <script>
+        const infoDiv=document.querySelector('.info'),memesDiv=document.querySelector('.memes');
+        const infoBtn=document.getElementById('infoBtn'),memesBtn=document.getElementById('memesBtn');
+        infoBtn.addEventListener('click',()=>{infoDiv.classList.add('active');memesDiv.classList.remove('active');});
+        memesBtn.addEventListener('click',()=>{memesDiv.classList.add('active');infoDiv.classList.remove('active');});
+        function openFullscreen(img) {
+    if (img.requestFullscreen) {
+        img.requestFullscreen();
+    } else if (img.webkitRequestFullscreen) { /* Safari */
+        img.webkitRequestFullscreen();
+    } else if (img.msRequestFullscreen) { /* IE11 */
+        img.msRequestFullscreen();
+    }
+}
+      <\/script>
+    </body>
+    </html>
+  `);
+  newWindow.document.close();
+}
+
+function openNewWindow8() {
+  const newWindow = window.open("", "newWindow", "width=400,height=300");
+  newWindow.document.write(`
+    <!doctype html><html><head><meta charset="utf-8"><title>Apu</title>
+    <style>body{font-family:Arial,sans-serif;text-align:center;margin-top:50px;background-color:#0000000;}
+    .info,.memes{display:none;}.active{display:block;}</style></head>
+    <body>
+      <img src="apu.webp" alt="Apu Nahasapeemapetilon" style="width:150px;height:auto;"><br>
+      <button id="infoBtn">Info</button><button id="memesBtn">Memes</button>
+      <h2>Apu Nahasapeemapetilon</h2>
+
+      <div class="info active">
+        <p>Apu Nahasapeemapetilon is the hardworking owner of the Kwik-E-Mart convenience store in The Simpsons.</p>
+        <audio controls><source src="äänet/Voicy_Has the whole world gone crazy.mp3" type="audio/mpeg"></audio>
+        <audio controls><source src="äänet/Voicy_ She's going to be here any second.mp3" type="audio/mpeg"></audio>
+        <audio controls><source src="äänet/Voicy_Of course god bless America.mp3" type="audio/mpeg"></audio>
+      </div>
+
+      <div class="memes">
+        <img src="memet paitsi homer/apu mem1.jpg" style="width:200px;height:auto;" onclick="openFullscreen(this)">
+        <img src="memet paitsi homer/apu mem2.webp" style="width:200px;height:auto;"  onclick="openFullscreen(this)">
+        <img src="memet paitsi homer/apu mem3.jpg" style="width:200px;height:auto;" onclick="openFullscreen(this)">
+        <img src="memet paitsi homer/apu mem4.png" style="width:200px;height:auto;" onclick="openFullscreen(this)">
+        <img src="memet paitsi homer/apu mem5.jpg" style="width:200px;height:auto;" onclick="openFullscreen(this)">
+        <img src="memet paitsi homer/apu mem6.gif" style="width:200px;height:auto;" onclick="openFullscreen(this)">
+      </div>
+
+      <button onclick="window.close()">Close</button>
+
+      <script>
+        const infoDiv=document.querySelector('.info'),memesDiv=document.querySelector('.memes');
+        const infoBtn=document.getElementById('infoBtn'),memesBtn=document.getElementById('memesBtn');
+        infoBtn.addEventListener('click',()=>{infoDiv.classList.add('active');memesDiv.classList.remove('active');});
+        memesBtn.addEventListener('click',()=>{memesDiv.classList.add('active');infoDiv.classList.remove('active');});
+        function openFullscreen(img) {
+    if (img.requestFullscreen) {
+        img.requestFullscreen();
+    } else if (img.webkitRequestFullscreen) { /* Safari */
+        img.webkitRequestFullscreen();
+    } else if (img.msRequestFullscreen) { /* IE11 */
+        img.msRequestFullscreen();
+    }
+}
+      <\/script>
+    </body></html>
+  `);
+  newWindow.document.close();
+}
+</script>
+
+</body>

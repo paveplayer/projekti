@@ -18,29 +18,39 @@
     <h1>Simpsons-sivusto</h1>
 </div>
 <a href="./springfield-sivu.html">springfield</a>
-<a href="">characters</a>
-<a href="">forum</a>
+<a href="./simpsons-hahmosivu.html">characters</a>
+<a href="./simpsons forum.html">forum</a>
 <hr style="width: 17cm; background-color: black; height: 2px;">
 <h2>moes</h2>
 <div class="main">
- <div class="kuvat" onclick=zoomIn()>
+ <div class="kuvat">
     <a href="https" target="_blank">
-        <img src="moe puolkuva.webp" alt="talo">
+        <img src="moe puolkuva.webp" alt="talo" onclick="openFullscreen(this)">
     </a>
     <a href="" target="_blank">
-        <img src="moe gifi.gif" alt="moes">
+        <img src="moe gifi.gif" alt="moes" onclick="openFullscreen(this)">
     </a>
     <a href="" target="_blank">
-        <img src="moen baari 2.png" alt="kwik-e-mart">
+        <img src="moen baari 2.png" alt="kwik-e-mart" onclick="openFullscreen(this)">
     </a>
     <a href="" target="_blank">
-        <img style="width: 100px;" src="moes.jpg" alt="simpsons keittiö">
+        <img style="width: 100px;" src="moes.jpg" alt="simpsons keittiö" onclick="openFullscreen(this)">
     </a>
     <a href="" target="_blank">
-        <img src="moes bar.webp" alt="">
+        <img src="moes ulkoot.jpg" alt="" onclick="openFullscreen(this)">
     </a>
  </div>
 </div>
-<script src="simpsons.js"></script>
+<script>
+    function openFullscreen(img) {
+    if (img.requestFullscreen) {
+        img.requestFullscreen();
+    } else if (img.webkitRequestFullscreen) { /* Safari */
+        img.webkitRequestFullscreen();
+    } else if (img.msRequestFullscreen) { /* IE11 */
+        img.msRequestFullscreen();
+    }
+}
+</script>
 </body>
 </html>
